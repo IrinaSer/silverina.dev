@@ -5,8 +5,7 @@ export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
       <h1 id="hero-title" className={styles.title}>
-        <span className={styles.line}>Frontend</span>{' '}
-        <span className={styles.line}>Developer</span>
+        <span className={styles.line}>Frontend</span> <span className={styles.line}>Developer</span>
       </h1>
 
       <div className={styles.details}>

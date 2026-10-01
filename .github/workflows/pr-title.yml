@@ -1,0 +1,22 @@
+name: PR title
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+permissions: {}
+
+jobs:
+  title:
+    runs-on: ubuntu-latest
+    steps:
+      # PRs are squash-merged, so the title becomes the commit on main.
+      - name: Check title against the commit convention
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          pattern='^(feat|fix|style|refactor|docs|chore): [a-z].*[^.]$'
+          if ! printf '%s' "$TITLE" | grep -Eq "$pattern"; then
+            echo "::error::PR title \"$TITLE\" does not match \"<type>: <summary>\". See spec/git-workflow.md."
+            exit 1
+          fi

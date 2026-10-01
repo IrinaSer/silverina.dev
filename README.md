@@ -14,6 +14,9 @@ npm run dev
 | `npm run dev` | local dev server |
 | `npm run build` | typecheck and production build into `dist/` |
 | `npm run lint` | ESLint |
+| `npm run format` | format the code with Prettier |
+| `npm run format:check` | check formatting without writing |
+| `npm run check:bundle` | fail if the built JavaScript exceeds the size budget |
 | `npm run preview` | serve the production build locally |
 
 ## Deployment

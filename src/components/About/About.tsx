@@ -11,8 +11,8 @@ export function About() {
       </h2>
 
       <p className={styles.bio}>
-        I’m Irina, a frontend developer interested in interfaces, systems and the small details
-        that make software feel good to use.
+        I’m Irina, a frontend developer interested in interfaces, systems and the small details that
+        make software feel good to use.
       </p>
 
       <dl className={styles.facts}>
