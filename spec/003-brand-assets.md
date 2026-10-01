@@ -118,7 +118,7 @@ Brand guidelines document, a symbol or monogram beyond the favicon `S`, custom l
 
 - [x] `favicon.svg` contains outlines only: no `<text>`, no font reference.
 - [x] The icon is legible at 16px on light and dark tab backgrounds.
-- [ ] `/favicon.ico` and `/apple-touch-icon.png` respond with 200 on the deployed site.
+- [x] `/favicon.ico` and `/apple-touch-icon.png` respond with 200 on the deployed site.
 
 ### Social preview
 
