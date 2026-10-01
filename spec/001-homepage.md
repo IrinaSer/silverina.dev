@@ -1,6 +1,6 @@
 # 001 — Homepage v1
 
-**Status:** In progress
+**Status:** Done
 **Owner:** Irina / Silverina
 **Site:** `https://silverina.dev`
 
@@ -419,7 +419,7 @@ Blog, CMS, authentication, contact form or backend, dark mode, internationalizat
 
 Reject the implementation if it resembles a generic SaaS landing page, a Bootstrap portfolio, a typical "developer portfolio" template, a cyberpunk portfolio or an AI-generated gradient-heavy portfolio. The site is recognisable through **typography, whitespace, composition and restrained motion**, not decorative effects.
 
-- [ ] Accepted by the owner on the deployed site.
+- [x] Accepted by the owner on the deployed site (2026-10-01).
 
 This criterion is judged by the owner. Once it is checked, the spec moves to `Done`.
 
