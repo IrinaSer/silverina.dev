@@ -1,13 +1,13 @@
 import { site } from '../../data/site';
 import styles from './Contact.module.css';
 
-const links = [
-  { label: 'GitHub', url: site.links.github },
-  { label: 'LinkedIn', url: site.links.linkedin },
-  { label: 'CV', url: site.links.cv },
-].filter((link) => link.url);
-
 export function Contact() {
+  const links = [
+    { label: 'GitHub', url: site.links.github },
+    { label: 'LinkedIn', url: site.links.linkedin },
+    { label: 'CV', url: site.links.cv },
+  ].filter((link) => link.url);
+
   return (
     <section id="contact" className={styles.section} aria-labelledby="contact-title">
       <p className="section-label">Contact</p>
