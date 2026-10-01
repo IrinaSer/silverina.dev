@@ -32,10 +32,15 @@
   font-size: var(--text-sm);
 }
 
+.status,
 .cta {
   font-size: var(--text-sm);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
+}
+
+.status {
+  font-size: var(--text-xs);
 }
 
 .arrow {

@@ -15,6 +15,7 @@ export const site = {
       description: 'A quieter way to browse the web.',
       type: 'Chrome Extension',
       technologies: ['Manifest V3'],
+      status: 'In development',
       url: '',
     },
   ],

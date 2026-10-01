@@ -15,6 +15,8 @@ function ProjectFeature({ project }: { project: Project }) {
         </div>
       </div>
 
+      {project.status && <p className={styles.status}>{project.status}</p>}
+
       {project.url && (
         <p className={styles.cta}>
           View project{' '}

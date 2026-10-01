@@ -159,10 +159,13 @@ the web.
 
 Chrome Extension · Manifest V3
 
+IN DEVELOPMENT
+
 View project →
 ```
 
 - Presented as a **large editorial feature**, not a small portfolio card.
+- If `projects[].status` is set, it is shown as a small label at the bottom of the block. Hushfeed shows `In development`.
 - There is no visual area in v1: an empty placeholder is not shown. A large visual is added when real Hushfeed visuals exist, with explicit dimensions so it causes no layout shift. **Do not invent product screenshots.**
 - The block feels interactive on hover and focus through restrained means: a subtle shift of the title and movement of the arrow. No excessive animation.
 - **Link behaviour.** If `projects[].url` is set, the whole block is one link and shows `View project →`. If it is empty, the block is not a link, has no hover affordance and does not show `View project →`. Never invent a URL.
@@ -307,6 +310,7 @@ export const site = {
       description: 'A quieter way to browse the web.',
       type: 'Chrome Extension',
       technologies: ['Manifest V3'],
+      status: 'In development',
       url: '',
     },
   ],
