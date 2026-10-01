@@ -1,24 +1,20 @@
-import { site } from './data/site';
+import { Header } from './components/Header/Header';
+import { Hero } from './components/Hero/Hero';
 import styles from './App.module.css';
 
 function App() {
   return (
-    <div className={styles.page}>
-      <header className={styles.header}>
-        <a className={styles.logo} href="#top">
-          {site.name}
-        </a>
-      </header>
+    <>
+      <Header />
 
       <main id="top" className={styles.main}>
-        <h1 className={styles.title}>{site.name}</h1>
-        <p className={styles.note}>silverina.dev is alive.</p>
+        <Hero />
       </main>
 
       <footer className={styles.footer}>
         <p>© 2026</p>
       </footer>
-    </div>
+    </>
   );
 }
 
