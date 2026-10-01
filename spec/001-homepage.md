@@ -359,9 +359,9 @@ Each slice is one short-lived branch and one PR, and leaves `main` deployable.
 | --- | --- | --- |
 | 1 | `chore/vite-pages-deploy` | Vite + React + TS scaffold, lint, CI, Pages deploy. The page shows the current placeholder content. Proves the pipeline end to end before any design work. |
 | 2 | `feat/design-foundation` | Tokens, fonts, global styles, `site.ts`, SEO metadata, favicon placeholder, page skeleton with landmarks. |
-| 3 | `feat/header-hero` | Header, hero, entrance motion. |
-| 4 | `feat/selected-work` | Hushfeed feature block with placeholder visual and interaction. |
-| 5 | `feat/experiments-about` | Experiments and About. |
+| 3 | `feat/header-hero` | Header, hero, entrance motion. In-page links are added by the slice that ships their target, so `main` never has a dead anchor. |
+| 4 | `feat/selected-work` | Hushfeed feature block with placeholder visual and interaction. Adds the `WORK` nav link and the `Explore work ↓` CTA. |
+| 5 | `feat/experiments-about` | Experiments and About. Adds the `ABOUT` nav link. |
 | 6 | `feat/contact-footer` | Contact and footer. |
 | 7 | `fix/homepage-qa` | Pass through every acceptance criterion; fixes only. |
 
