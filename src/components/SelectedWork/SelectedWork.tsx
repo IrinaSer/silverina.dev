@@ -29,7 +29,12 @@ function ProjectFeature({ project }: { project: Project }) {
   );
 
   return project.url ? (
-    <a className={`${styles.project} ${styles.linked}`} href={project.url} target="_blank" rel="noreferrer">
+    <a
+      className={`${styles.project} ${styles.linked}`}
+      href={project.url}
+      target="_blank"
+      rel="noreferrer"
+    >
       {content}
     </a>
   ) : (
