@@ -15,3 +15,9 @@ test('does not render the GitHub link while its URL is empty', () => {
 
   expect(screen.queryByText(/github/i)).not.toBeInTheDocument();
 });
+
+test('the wordmark links to the top of the page', () => {
+  render(<Header />);
+
+  expect(screen.getByRole('link', { name: 'Silverina' })).toHaveAttribute('href', '#top');
+});

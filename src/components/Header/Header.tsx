@@ -1,4 +1,5 @@
 import { site } from '../../data/site';
+import { Wordmark } from '../Wordmark/Wordmark';
 import styles from './Header.module.css';
 
 export function Header() {
@@ -6,7 +7,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <a className={styles.logo} href="#top">
-          {site.name}
+          <Wordmark />
         </a>
 
         <nav aria-label="Primary">
