@@ -1,5 +1,7 @@
 import { About } from './components/About/About';
+import { Contact } from './components/Contact/Contact';
 import { Experiments } from './components/Experiments/Experiments';
+import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { Hero } from './components/Hero/Hero';
 import { SelectedWork } from './components/SelectedWork/SelectedWork';
@@ -15,11 +17,10 @@ function App() {
         <SelectedWork />
         <Experiments />
         <About />
+        <Contact />
       </main>
 
-      <footer className={styles.footer}>
-        <p>© 2026</p>
-      </footer>
+      <Footer />
     </>
   );
 }
