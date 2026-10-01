@@ -11,6 +11,9 @@ export function Header() {
 
         <nav aria-label="Primary">
           <ul className={styles.nav}>
+            <li>
+              <a href="#work">Work</a>
+            </li>
             {site.links.github && (
               <li>
                 <a href={site.links.github} target="_blank" rel="noreferrer">

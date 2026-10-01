@@ -1,0 +1,97 @@
+.section {
+  padding-block: var(--space-section);
+}
+
+.project {
+  display: grid;
+  gap: clamp(var(--space-4), 4vw, var(--space-5));
+  margin-block-start: clamp(var(--space-5), 6vw, var(--space-6));
+}
+
+.intro {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.name {
+  font-size: var(--text-3xl);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.description {
+  max-inline-size: 18ch;
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  text-wrap: balance;
+}
+
+.meta {
+  margin-block-start: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.visual {
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 16 / 10;
+  padding: clamp(var(--space-3), 3vw, var(--space-4));
+  border: 1px solid var(--color-rule);
+  background: var(--color-surface);
+}
+
+.status {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.cta {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.arrow {
+  display: inline-block;
+}
+
+/* Interaction exists only when the project has a destination. */
+.linked .visual,
+.linked .name,
+.linked .arrow {
+  transition:
+    transform var(--duration-slow) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.linked:hover .visual,
+.linked:focus-visible .visual {
+  border-color: var(--color-text);
+}
+
+.linked:hover .name,
+.linked:focus-visible .name {
+  transform: translateX(0.5rem);
+}
+
+.linked:hover .arrow,
+.linked:focus-visible .arrow {
+  transform: translateX(0.5rem);
+}
+
+@media (min-width: 48rem) {
+  .intro {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: end;
+  }
+
+  .name {
+    grid-column: 1 / span 7;
+  }
+
+  .summary {
+    grid-column: 8 / -1;
+  }
+}

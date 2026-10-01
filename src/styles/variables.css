@@ -5,6 +5,8 @@
   --color-text-secondary: #6f6d68;
   /* Decoration only: too low in contrast for text or focus indicators. */
   --color-silver: #b7b5af;
+  /* A darker paper for placeholders. Use primary text on it, never secondary. */
+  --color-surface: #ebe7df;
   --color-rule: var(--color-silver);
   --color-focus: var(--color-text);
 
@@ -18,6 +20,7 @@
   --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
   --text-xl: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem);
   --text-2xl: clamp(2.25rem, 1.5rem + 3.6vw, 4.5rem);
+  --text-3xl: clamp(3rem, 1.5rem + 7.5vw, 8rem);
   --text-display: clamp(3.5rem, 19vw, 13rem);
 
   --leading-tight: 0.92;

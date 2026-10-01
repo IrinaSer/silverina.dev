@@ -17,11 +17,22 @@ export function Hero() {
         <div className={styles.meta}>
           <p className={styles.stack}>{stack.join(' · ')}</p>
 
-          {site.links.github && (
-            <a className={styles.link} href={site.links.github} target="_blank" rel="noreferrer">
-              GitHub <span aria-hidden="true">↗</span>
+          <div className={styles.actions}>
+            <a className={styles.link} href="#work">
+              Explore work <span aria-hidden="true">↓</span>
             </a>
-          )}
+
+            {site.links.github && (
+              <a
+                className={`${styles.link} ${styles.secondary}`}
+                href={site.links.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </section>
