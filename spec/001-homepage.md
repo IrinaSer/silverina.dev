@@ -176,16 +176,23 @@ Section label: `EXPERIMENTS`.
 
 Intro: "Small things I make when I want to understand how something works."
 
-A simple numbered list, not cards:
+A simple numbered list of real projects, not cards. Each row is one link to the project's repository and shows the name, a one-line description, technologies and `↗`:
 
 ```text
-01    Chrome extensions
-02    UI experiments
-03    Creative coding
-04    Tiny tools
+01    Meal AI                                   ↗
+      An AI nutrition agent that runs in Claude Code…
+      Claude Code · Python · Shell
+
+02    Notebook                                  ↗
+      A browser-native Jupyter-style notebook for JS/TS…
+      TypeScript · FastAPI · Postgres · Docker
 ```
 
-These are categories, not projects, and are **not clickable** in v1. They therefore carry no arrow and no hover affordance; an item gains `→` only when it gets a real destination. Do not fabricate projects.
+- Projects live in `site.experiments`; descriptions follow the repositories' own descriptions.
+- Hover and focus are restrained: a small shift of the name and of the arrow.
+- The areas of interest (`Chrome extensions · UI experiments · Creative coding · Tiny tools`) are shown as one line of plain text under the intro. They are **not** list items and not links; a topic becomes a list row only when it has a real project.
+
+Do not fabricate projects.
 
 ### 5.5 About
 
@@ -297,6 +304,8 @@ All external links and project metadata live in `src/data/site.ts` and are never
 export const site = {
   name: 'Silverina',
   email: 'hello@silverina.dev',
+
+  stack: ['TypeScript', 'Angular', 'React'],
 
   links: {
     github: 'https://github.com/IrinaSer',
@@ -429,3 +438,4 @@ Answered by the owner on 2026-10-01.
 | 4 | Email | The `hello@silverina.dev` mailbox exists and receives mail. |
 | 5 | Hushfeed | Still in development: `url` stays empty, so the block is not a link and shows no `View project →`. |
 | 6 | Typefaces | Display: Instrument Serif. UI / body: Geist Sans, fallback `system-ui, sans-serif`. |
+| 7 | Experiments | Lists two real projects: Meal AI (`IrinaSer/Meal-AI-template`) and Notebook (`larchanka-training/dmc-1-t2-notebook-mono`, built during training at coders.su). |
