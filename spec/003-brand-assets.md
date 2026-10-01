@@ -50,7 +50,7 @@ No custom letterforms and no ligature tricks in this spec. If none of the four w
 - The wordmark is **live text** in the chosen typeface, not an image: it stays selectable, scales with the layout and needs no extra request. Markup keeps natural casing; uppercase, if chosen, comes from CSS.
 - It is one `Wordmark` component used by the header and the footer.
 - In the header it remains a link to the top of the page with the accessible name `Silverina`.
-- If the italic is chosen, the italic `woff2` (Latin only) is added to `fonts.css`. It is not preloaded unless it is above the fold.
+- Candidate C needs no additional font file: Instrument Serif regular is already loaded and preloaded for the hero.
 
 ## 5. Favicon
 
@@ -138,7 +138,7 @@ Answered by the owner on 2026-10-02.
 
 | # | Topic | Decision |
 | --- | --- | --- |
-| 1 | Wordmark candidate (A–D) | Open: decided on the comparison page in slice 1. |
+| 1 | Wordmark candidate (A–D) | **C** — `SILVERINA` in Instrument Serif, uppercase, tracked. Chosen on the comparison page on 2026-10-02. |
 | 2 | Favicon colours | Light `S` on a dark square. |
 | 3 | Text on the preview image | Heading, wordmark and `silverina.dev` only; no tagline. |
-| 4 | Wordmark size in the header | Open: decided on the comparison page together with the candidate. The page shows each candidate at more than one size. |
+| 4 | Wordmark size in the header | Open: 18px or 22px, the two sizes shown for candidate C. Needed before slice 2. |
