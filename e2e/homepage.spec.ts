@@ -89,3 +89,26 @@ test('shows the hero immediately with reduced motion', async ({ page }) => {
 
   expect(style).toEqual({ animation: 'none', opacity: '1' });
 });
+
+test('every icon referenced in the head resolves', async ({ page, request }) => {
+  await page.goto('/');
+
+  const hrefs = await page
+    .locator('link[rel~="icon"], link[rel="apple-touch-icon"]')
+    .evaluateAll((links) => links.map((link) => (link as HTMLLinkElement).href));
+
+  expect(hrefs).toHaveLength(3);
+
+  for (const href of hrefs) {
+    const response = await request.get(href);
+    expect(response.status(), href).toBe(200);
+  }
+});
+
+test('the SVG favicon is outlines only, with no font dependency', async ({ request }) => {
+  const svg = await (await request.get('/favicon.svg')).text();
+
+  expect(svg).toContain('<path');
+  expect(svg).not.toContain('<text');
+  expect(svg).not.toContain('font-family');
+});

@@ -18,7 +18,7 @@ spec/
 | [git-workflow](./git-workflow.md) | Git workflow | Accepted |
 | [001](./001-homepage.md) | Homepage v1 | Done |
 | [002](./002-ci-quality-gates.md) | CI quality gates | Done |
-| [003](./003-brand-assets.md) | Wordmark, favicon and social preview | Accepted |
+| [003](./003-brand-assets.md) | Wordmark, favicon and social preview | In progress |
 
 ## Status lifecycle
 
