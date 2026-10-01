@@ -100,6 +100,7 @@
   }
 
   .title {
+    animation-name: enter-title;
     animation-delay: 120ms;
   }
 
@@ -109,6 +110,15 @@
 
   .meta {
     animation-delay: 400ms;
+  }
+}
+
+/* The heading is the LCP element. Chrome skips fully transparent paints as LCP
+   candidates, so it starts barely visible instead of at zero. */
+@keyframes enter-title {
+  from {
+    opacity: 0.01;
+    transform: translateY(0.75rem);
   }
 }
 

@@ -99,7 +99,7 @@ Two typefaces: an editorial serif against a technical sans-serif.
 
 - Avoid excessive weights and styles. Instrument Serif ships in regular and italic only; do not synthesise bold.
 - Uppercase text is produced with CSS `text-transform`, while the markup keeps natural casing, so assistive technology does not spell words out.
-- Fonts are self-hosted (no third-party font requests), in `woff2`, with `font-display: swap`. The display font used in the hero is preloaded.
+- Fonts are self-hosted (no third-party font requests), in `woff2`, with `font-display: swap`. The display font used in the hero is preloaded. Only Latin and Latin Extended subsets are shipped.
 
 ### 4.3 Layout
 
@@ -145,7 +145,7 @@ Do not:
 - use "Passionate frontend developer…";
 - make a technology list the primary hero message.
 
-**Motion.** A subtle entrance sequence: header, then heading, then supporting text, then CTA. Short, smooth, non-blocking, CSS only. Content must be present in the DOM and readable without JavaScript-driven reveal. Under `prefers-reduced-motion: reduce` the page renders without entrance animations.
+**Motion.** A subtle entrance sequence: header, then heading, then supporting text, then CTA. Short, smooth, non-blocking, CSS only. Content must be present in the DOM and readable without JavaScript-driven reveal. Under `prefers-reduced-motion: reduce` the page renders without entrance animations. The heading is the LCP element and must never be painted fully transparent, or LCP cannot be measured.
 
 ### 5.3 Selected Work
 
@@ -336,6 +336,7 @@ An empty string means "not available yet" and the corresponding UI is omitted. I
 - `<html lang="en">`.
 - Open Graph and Twitter card metadata. `og:image` is added only when a real image exists; until then use the `summary` card without an image.
 - A simple placeholder SVG favicon; the final mark is a separate task.
+- `robots.txt` allowing all crawlers.
 - No fake structured data.
 
 Meta tags are static in `index.html`, so they are present without JavaScript.
@@ -384,41 +385,43 @@ Blog, CMS, authentication, contact form or backend, dark mode, internationalizat
 
 ### Functional
 
-- [ ] `https://silverina.dev` loads over HTTPS after a push to `main`, with no manual steps.
-- [ ] All navigation links work; unavailable links are not rendered.
-- [ ] `mailto:hello@silverina.dev` works.
-- [ ] No broken links, no console errors or warnings.
-- [ ] No invented URLs, screenshots or projects.
+- [x] `https://silverina.dev` loads over HTTPS after a push to `main`, with no manual steps.
+- [x] All navigation links work; unavailable links are not rendered.
+- [x] `mailto:hello@silverina.dev` works.
+- [x] No broken links, no console errors or warnings.
+- [x] No invented URLs, screenshots or projects.
 
 ### Responsive
 
-- [ ] 320px
-- [ ] 375px
-- [ ] 768px
-- [ ] 1024px
-- [ ] 1440px
-- [ ] No horizontal scroll at any of the above.
+- [x] 320px
+- [x] 375px
+- [x] 768px
+- [x] 1024px
+- [x] 1440px
+- [x] No horizontal scroll at any of the above.
 
 ### Accessibility
 
-- [ ] Every interactive element is reachable and operable by keyboard, in a logical order.
-- [ ] Focus is always visible.
-- [ ] One `h1`; headings are nested without skipped levels.
-- [ ] Text contrast meets WCAG AA.
-- [ ] Reduced motion disables entrance animations and smooth scrolling.
-- [ ] Automated audit (axe or Lighthouse) reports no violations.
+- [x] Every interactive element is reachable and operable by keyboard, in a logical order.
+- [x] Focus is always visible.
+- [x] One `h1`; headings are nested without skipped levels.
+- [x] Text contrast meets WCAG AA.
+- [x] Reduced motion disables entrance animations and smooth scrolling.
+- [x] Automated audit (axe or Lighthouse) reports no violations.
 
 ### Performance
 
-- [ ] Budgets in 8.5 are met.
-- [ ] Only the runtime dependencies listed in 8.1.
-- [ ] No visible layout shift on load.
+- [x] Budgets in 8.5 are met.
+- [x] Only the runtime dependencies listed in 8.1.
+- [x] No visible layout shift on load.
 
 ### Design
 
 Reject the implementation if it resembles a generic SaaS landing page, a Bootstrap portfolio, a typical "developer portfolio" template, a cyberpunk portfolio or an AI-generated gradient-heavy portfolio. The site is recognisable through **typography, whitespace, composition and restrained motion**, not decorative effects.
 
-This criterion is judged by the owner on a deployed preview.
+- [ ] Accepted by the owner on the deployed site.
+
+This criterion is judged by the owner. Once it is checked, the spec moves to `Done`.
 
 ## 12. Definition of Done
 
