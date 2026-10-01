@@ -5,8 +5,6 @@
   --color-text-secondary: #6f6d68;
   /* Decoration only: too low in contrast for text or focus indicators. */
   --color-silver: #b7b5af;
-  /* A darker paper for placeholders. Use primary text on it, never secondary. */
-  --color-surface: #ebe7df;
   --color-rule: var(--color-silver);
   --color-focus: var(--color-text);
 

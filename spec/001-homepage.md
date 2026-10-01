@@ -159,14 +159,12 @@ the web.
 
 Chrome Extension · Manifest V3
 
-[ large visual area ]
-
 View project →
 ```
 
 - Presented as a **large editorial feature**, not a small portfolio card.
-- The visual area holds a neutral placeholder with a fixed aspect ratio, so replacing it later causes no layout shift. **Do not invent product screenshots.**
-- The block feels interactive on hover and focus through restrained means: a subtle shift of the visual, a border or background transition, movement of the arrow. No excessive animation.
+- There is no visual area in v1: an empty placeholder is not shown. A large visual is added when real Hushfeed visuals exist, with explicit dimensions so it causes no layout shift. **Do not invent product screenshots.**
+- The block feels interactive on hover and focus through restrained means: a subtle shift of the title and movement of the arrow. No excessive animation.
 - **Link behaviour.** If `projects[].url` is set, the whole block is one link and shows `View project →`. If it is empty, the block is not a link, has no hover affordance and does not show `View project →`. Never invent a URL.
 
 ### 5.4 Experiments
@@ -360,7 +358,7 @@ Each slice is one short-lived branch and one PR, and leaves `main` deployable.
 | 1 | `chore/vite-pages-deploy` | Vite + React + TS scaffold, lint, CI, Pages deploy. The page shows the current placeholder content. Proves the pipeline end to end before any design work. |
 | 2 | `feat/design-foundation` | Tokens, fonts, global styles, `site.ts`, SEO metadata, favicon placeholder, page skeleton with landmarks. |
 | 3 | `feat/header-hero` | Header, hero, entrance motion. In-page links are added by the slice that ships their target, so `main` never has a dead anchor. |
-| 4 | `feat/selected-work` | Hushfeed feature block with placeholder visual and interaction. Adds the `WORK` nav link and the `Explore work ↓` CTA. |
+| 4 | `feat/selected-work` | Hushfeed feature block and interaction. Adds the `WORK` nav link and the `Explore work ↓` CTA. |
 | 5 | `feat/experiments-about` | Experiments and About. Adds the `ABOUT` nav link. |
 | 6 | `feat/contact-footer` | Contact and footer. |
 | 7 | `fix/homepage-qa` | Pass through every acceptance criterion; fixes only. |

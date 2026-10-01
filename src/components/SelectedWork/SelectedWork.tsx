@@ -15,11 +15,6 @@ function ProjectFeature({ project }: { project: Project }) {
         </div>
       </div>
 
-      {/* Placeholder until real Hushfeed visuals exist; the fixed ratio prevents layout shift later. */}
-      <div className={styles.visual}>
-        <p className={styles.status}>In development</p>
-      </div>
-
       {project.url && (
         <p className={styles.cta}>
           View project{' '}
