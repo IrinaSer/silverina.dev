@@ -16,6 +16,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      is_tip: ${{ steps.tip.outputs.is_tip }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -34,13 +36,25 @@ jobs:
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test
+      # Runs can finish out of order. Only the newest commit on main may deploy,
+      # otherwise an older build can overwrite a newer one.
+      - id: tip
+        if: github.event_name != 'pull_request'
+        run: |
+          latest=$(git ls-remote origin refs/heads/main | cut -f1)
+          if [ "$latest" = "$GITHUB_SHA" ]; then
+            echo "is_tip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_tip=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Skipping deploy: $GITHUB_SHA is no longer the tip of main ($latest)."
+          fi
       - if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && needs.build.outputs.is_tip == 'true'
     needs: build
     runs-on: ubuntu-latest
     permissions:
