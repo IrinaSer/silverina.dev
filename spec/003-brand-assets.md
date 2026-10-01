@@ -141,4 +141,4 @@ Answered by the owner on 2026-10-02.
 | 1 | Wordmark candidate (A–D) | **C** — `SILVERINA` in Instrument Serif, uppercase, tracked. Chosen on the comparison page on 2026-10-02. |
 | 2 | Favicon colours | Light `S` on a dark square. |
 | 3 | Text on the preview image | Heading, wordmark and `silverina.dev` only; no tagline. |
-| 4 | Wordmark size in the header | Open: 18px or 22px, the two sizes shown for candidate C. Needed before slice 2. |
+| 4 | Wordmark size in the header | 22px, the larger of the two sizes shown for candidate C. The footer uses the same mark at a smaller size. |
