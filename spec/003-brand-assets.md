@@ -122,15 +122,15 @@ Brand guidelines document, a symbol or monogram beyond the favicon `S`, custom l
 
 ### Social preview
 
-- [ ] `og.png` is 1200×630 and at most 300 kB.
-- [ ] `npm run generate:og` reproduces it.
+- [x] `og.png` is 1200×630 and at most 300 kB.
+- [x] `npm run generate:og` reproduces it.
 - [ ] The card renders in LinkedIn Post Inspector and in a Telegram message (checked by the owner; both need a public URL and an account).
 
 ### Quality gates
 
-- [ ] All gates from [002](./002-ci-quality-gates.md) pass; the JavaScript bundle stays within 80 kB.
-- [ ] A browser check asserts that every icon and the `og:image` URL referenced in `<head>` resolves.
-- [ ] Lighthouse mobile stays at or above 95 in all four categories, CLS below 0.05.
+- [x] All gates from [002](./002-ci-quality-gates.md) pass; the JavaScript bundle stays within 80 kB.
+- [x] A browser check asserts that every icon and the `og:image` URL referenced in `<head>` resolves.
+- [x] Lighthouse mobile stays at or above 95 in all four categories, CLS below 0.05.
 
 ## 10. Decisions
 
