@@ -17,14 +17,13 @@
   font-size: var(--text-sm);
 }
 
-.logo,
+.logo {
+  font-size: 1.375rem;
+}
+
 .nav {
   text-transform: uppercase;
   letter-spacing: var(--tracking-label);
-}
-
-.logo {
-  font-weight: 500;
 }
 
 .nav {
@@ -46,6 +45,10 @@
   .inner {
     gap: var(--space-3);
     font-size: var(--text-xs);
+  }
+
+  .logo {
+    font-size: 1.125rem;
   }
 
   .nav {
