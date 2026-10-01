@@ -1,6 +1,6 @@
 # 003 — Wordmark, favicon and social preview
 
-**Status:** Accepted
+**Status:** In progress
 **Owner:** Irina / Silverina
 
 ## 1. Context
@@ -64,7 +64,7 @@ No custom letterforms and no ligature tricks in this spec. If none of the four w
 | `favicon.ico` | 32×32 | legacy fallback, requests to `/favicon.ico` |
 | `apple-touch-icon.png` | 180×180, no transparency, no rounded corners (iOS rounds them) | iOS home screen |
 
-- Outlines are produced by a one-off script from the font file already in `node_modules`; the resulting files are committed to `public/`. Instrument Serif is under the SIL Open Font License, which permits this.
+- Outlines are produced by `npm run generate:icons` from the font file already in `node_modules`, using `opentype.js` (dev dependency) for the glyph and Playwright for the raster files; the results are committed to `public/`. Instrument Serif is under the SIL Open Font License, which permits this.
 - No web app manifest and no further icon sizes: the site is not an installable app.
 
 ## 6. Social preview image
@@ -109,15 +109,15 @@ Brand guidelines document, a symbol or monogram beyond the favicon `S`, custom l
 
 ### Wordmark
 
-- [ ] The owner's choice is recorded in section 10.
-- [ ] Header and footer render the same `Wordmark` component.
-- [ ] The header link's accessible name is `Silverina` and it still scrolls to the top.
-- [ ] No horizontal overflow at 320px with the three navigation links.
+- [x] The owner's choice is recorded in section 10.
+- [x] Header and footer render the same `Wordmark` component.
+- [x] The header link's accessible name is `Silverina` and it still scrolls to the top.
+- [x] No horizontal overflow at 320px with the three navigation links.
 
 ### Favicon
 
-- [ ] `favicon.svg` contains outlines only: no `<text>`, no font reference.
-- [ ] The icon is legible at 16px on light and dark tab backgrounds.
+- [x] `favicon.svg` contains outlines only: no `<text>`, no font reference.
+- [x] The icon is legible at 16px on light and dark tab backgrounds.
 - [ ] `/favicon.ico` and `/apple-touch-icon.png` respond with 200 on the deployed site.
 
 ### Social preview
