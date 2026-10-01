@@ -1,6 +1,6 @@
 # 001 — Homepage v1
 
-**Status:** Accepted
+**Status:** In progress
 **Owner:** Irina / Silverina
 **Site:** `https://silverina.dev`
 

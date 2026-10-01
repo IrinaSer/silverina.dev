@@ -16,7 +16,7 @@ spec/
 | Spec | Title | Status |
 | --- | --- | --- |
 | [git-workflow](./git-workflow.md) | Git workflow | Accepted |
-| [001](./001-homepage.md) | Homepage v1 | Accepted |
+| [001](./001-homepage.md) | Homepage v1 | In progress |
 
 ## Status lifecycle
 
