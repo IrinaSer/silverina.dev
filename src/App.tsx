@@ -1,5 +1,6 @@
 import { Header } from './components/Header/Header';
 import { Hero } from './components/Hero/Hero';
+import { SelectedWork } from './components/SelectedWork/SelectedWork';
 import styles from './App.module.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
       <main id="top" className={styles.main}>
         <Hero />
+        <SelectedWork />
       </main>
 
       <footer className={styles.footer}>
