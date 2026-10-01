@@ -21,15 +21,19 @@ Branch names are lowercase kebab-case and describe the change: `feat/homepage-he
 - No `develop` branch.
 - No classic `release/*` or `hotfix/*` branches.
 - Feature branches are short-lived: one slice of a spec, merged within a day or two.
-- Larger changes go through a Pull Request.
-- Small, safe changes may go directly to `main` while the project has a single contributor.
+- Every change reaches `main` through a Pull Request. Direct pushes are rejected by a repository ruleset, for the owner too.
 - Production deployment happens automatically after every change to `main`.
+
+## Protection of `main`
+
+The `Protect main` ruleset (repository settings → Rules) enforces the rules above: pull requests only, required `build` and `title` checks, squash merge only, no force pushes, no branch deletion. It has no bypass list.
 
 ## Pull requests
 
 - A PR references the spec and slice it implements, for example `spec/001-homepage.md, slice 2`.
-- A PR must pass CI (typecheck, lint, build) before it is merged.
-- PRs are squash-merged, so `main` keeps one commit per change; the squash commit follows the commit convention below.
+- The PR title follows the commit convention below; the `title` check enforces it.
+- The `build` and `title` checks must pass before a PR can be merged. `build` covers formatting, lint, types, unit tests, the build, the bundle budget and browser checks (see [002](./002-ci-quality-gates.md)).
+- PRs are squash-merged, the only merge method the ruleset allows, so `main` keeps one commit per change and the PR title becomes that commit.
 - The branch is deleted after merge.
 
 ## Commit convention
@@ -60,7 +64,7 @@ chore: configure GitHub Pages
 ## Deployment
 
 ```text
-push to main → GitHub Actions → build → GitHub Pages → silverina.dev
+merge into main → GitHub Actions → checks → build → GitHub Pages → silverina.dev
 ```
 
-Build artifacts are never committed or uploaded by hand.
+A failing check on `main` blocks the deploy; the site stays on the previous version. Build artifacts are never committed or uploaded by hand.

@@ -1,6 +1,6 @@
 # 002 — CI quality gates
 
-**Status:** In progress
+**Status:** Done
 **Owner:** Irina / Silverina
 
 ## 1. Context
@@ -83,6 +83,7 @@ A repository ruleset on `main`:
 
 - changes reach `main` only through a pull request;
 - the CI check and the PR title check must pass before merging;
+- squash is the only allowed merge method;
 - no force pushes, no branch deletion.
 
 Direct pushes to `main` stop working for everyone, including the owner. [git-workflow](./git-workflow.md) is updated to match.
@@ -115,14 +116,14 @@ push to main      → the same, then deploy
 
 ## 7. Acceptance criteria
 
-- [ ] Every gate in section 3 runs on pull requests and on `main`.
-- [ ] Each gate fails when its rule is deliberately broken (verified once per gate).
-- [ ] A PR run takes under 3 minutes.
-- [ ] `npm test` runs unit tests locally; `npm run test:e2e` runs browser checks locally.
-- [ ] Dependabot opens grouped PRs.
-- [ ] A PR with a non-conforming title fails the title check.
-- [ ] A direct push to `main` is rejected; a PR with a failing check cannot be merged.
-- [ ] `README.md` lists the new scripts.
+- [x] Every gate in section 3 runs on pull requests and on `main`.
+- [x] Each gate fails when its rule is deliberately broken (verified once per gate).
+- [x] A PR run takes under 3 minutes.
+- [x] `npm test` runs unit tests locally; `npm run test:e2e` runs browser checks locally.
+- [ ] Dependabot opens grouped PRs. Configured; not observed yet, the first weekly run has not happened.
+- [x] A PR with a non-conforming title fails the title check.
+- [x] A direct push to `main` is rejected; a PR with a failing check cannot be merged.
+- [x] `README.md` lists the new scripts.
 
 ## 8. Decisions
 
