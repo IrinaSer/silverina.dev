@@ -16,10 +16,13 @@ npm run dev
 | `npm run lint` | ESLint |
 | `npm test` | unit tests (Vitest) |
 | `npm run test:watch` | unit tests in watch mode |
+| `npm run test:e2e` | build, then browser checks (Playwright + axe) |
 | `npm run format` | format the code with Prettier |
 | `npm run format:check` | check formatting without writing |
 | `npm run check:bundle` | fail if the built JavaScript exceeds the size budget |
 | `npm run preview` | serve the production build locally |
+
+Browser checks need Chromium once: `npx playwright install chromium`.
 
 ## Deployment
 
