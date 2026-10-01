@@ -1,6 +1,6 @@
 # 002 — CI quality gates
 
-**Status:** Accepted
+**Status:** In progress
 **Owner:** Irina / Silverina
 
 ## 1. Context

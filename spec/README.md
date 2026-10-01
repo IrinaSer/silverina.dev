@@ -17,7 +17,7 @@ spec/
 | --- | --- | --- |
 | [git-workflow](./git-workflow.md) | Git workflow | Accepted |
 | [001](./001-homepage.md) | Homepage v1 | Done |
-| [002](./002-ci-quality-gates.md) | CI quality gates | Accepted |
+| [002](./002-ci-quality-gates.md) | CI quality gates | In progress |
 
 ## Status lifecycle
 
