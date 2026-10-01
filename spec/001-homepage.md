@@ -298,6 +298,8 @@ export const site = {
   name: 'Silverina',
   email: 'hello@silverina.dev',
 
+  stack: ['TypeScript', 'Angular', 'React'],
+
   links: {
     github: 'https://github.com/IrinaSer',
     linkedin: 'https://www.linkedin.com/in/irina-pukhkaia/',

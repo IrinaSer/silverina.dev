@@ -1,8 +1,6 @@
 import { site } from '../../data/site';
 import styles from './Hero.module.css';
 
-const stack = ['TypeScript', 'Angular', 'React'];
-
 export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
@@ -15,7 +13,7 @@ export function Hero() {
         <p className={styles.lead}>I build thoughtful interfaces and useful little things.</p>
 
         <div className={styles.meta}>
-          <p className={styles.stack}>{stack.join(' · ')}</p>
+          <p className={styles.stack}>{site.stack.join(' · ')}</p>
 
           <div className={styles.actions}>
             <a className={styles.link} href="#work">

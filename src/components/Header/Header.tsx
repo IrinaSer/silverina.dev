@@ -14,6 +14,9 @@ export function Header() {
             <li>
               <a href="#work">Work</a>
             </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
             {site.links.github && (
               <li>
                 <a href={site.links.github} target="_blank" rel="noreferrer">
