@@ -112,3 +112,30 @@ test('the SVG favicon is outlines only, with no font dependency', async ({ reque
   expect(svg).not.toContain('<text');
   expect(svg).not.toContain('font-family');
 });
+
+test('the social preview image resolves and matches its metadata', async ({ page, request }) => {
+  await page.goto('/');
+
+  const meta = (property: string) =>
+    page.locator(`meta[property="${property}"]`).getAttribute('content');
+  const url = (await meta('og:image')) ?? '';
+
+  // Crawlers need an absolute URL; the file itself is checked on the local server.
+  expect(url).toMatch(/^https:\/\/silverina\.dev\//);
+
+  const response = await request.get(new URL(url).pathname);
+  const body = await response.body();
+
+  expect(response.status()).toBe(200);
+  expect(response.headers()['content-type']).toBe('image/png');
+  expect(body.length).toBeLessThanOrEqual(300_000);
+
+  // PNG stores width and height as big-endian integers at bytes 16 and 20.
+  expect(String(body.readUInt32BE(16))).toBe(await meta('og:image:width'));
+  expect(String(body.readUInt32BE(20))).toBe(await meta('og:image:height'));
+
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+    'content',
+    'summary_large_image',
+  );
+});

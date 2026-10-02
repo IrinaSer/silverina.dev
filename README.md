@@ -21,6 +21,7 @@ npm run dev
 | `npm run format:check` | check formatting without writing |
 | `npm run check:bundle` | fail if the built JavaScript exceeds the size budget |
 | `npm run generate:icons` | rebuild the favicon set in `public/` from the font |
+| `npm run generate:og` | rebuild the social preview image `public/og.png` |
 | `npm run preview` | serve the production build locally |
 
 Browser checks need Chromium once: `npx playwright install chromium`.
