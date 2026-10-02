@@ -1,6 +1,6 @@
 # 003 — Wordmark, favicon and social preview
 
-**Status:** In progress
+**Status:** Done
 **Owner:** Irina / Silverina
 
 ## 1. Context
@@ -124,7 +124,7 @@ Brand guidelines document, a symbol or monogram beyond the favicon `S`, custom l
 
 - [x] `og.png` is 1200×630 and at most 300 kB.
 - [x] `npm run generate:og` reproduces it.
-- [ ] The card renders in LinkedIn Post Inspector and in a Telegram message (checked by the owner; both need a public URL and an account).
+- [x] The card renders in LinkedIn Post Inspector and in a Telegram message (checked by the owner on 2026-10-02).
 
 ### Quality gates
 

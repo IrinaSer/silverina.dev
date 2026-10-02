@@ -332,6 +332,7 @@ An empty string means "not available yet" and the corresponding UI is omitted. I
 
 - `<title>`: `Silverina — Frontend Developer`
 - Meta description: "Silverina is the personal site of Irina, a frontend developer building thoughtful interfaces, web products and small experiments." At least 100 characters, which LinkedIn requires for link previews, and under 160 so search results do not truncate it.
+- Author: `Irina Pukhkaia` in `<meta name="author">`. This is the only place the surname appears on the site.
 - Canonical: `https://silverina.dev/`
 - `<html lang="en">`.
 - Open Graph and Twitter card metadata. `og:image` is added only when a real image exists; until then use the `summary` card without an image.
