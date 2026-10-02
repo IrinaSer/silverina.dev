@@ -134,6 +134,13 @@ test('the social preview image resolves and matches its metadata', async ({ page
   expect(String(body.readUInt32BE(16))).toBe(await meta('og:image:width'));
   expect(String(body.readUInt32BE(20))).toBe(await meta('og:image:height'));
 
+  await expect(page.locator('meta[name="author"]')).toHaveAttribute('content', /\S/);
+
+  // LinkedIn warns about link previews whose description is under 100 characters.
+  const description = (await meta('og:description')) ?? '';
+  expect(description.length).toBeGreaterThanOrEqual(100);
+  expect(description.length).toBeLessThanOrEqual(160);
+
   await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
     'content',
     'summary_large_image',
