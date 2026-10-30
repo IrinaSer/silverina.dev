@@ -75,7 +75,7 @@ PRs are squash-merged, so the PR title becomes the commit on `main`. A separate 
 - Lowercase first word in the summary, no trailing period.
 - Runs when a PR is opened, edited or updated, so fixing the title re-runs only this check.
 - A few lines of shell in the workflow; no third-party action.
-- Dependabot is configured with the `chore` prefix so its PRs pass.
+- Dependabot is configured with the `chore` prefix so its PRs pass. It capitalizes the first word (`chore: Bump ...`), so the check accepts an uppercase first letter for PRs opened by `dependabot[bot]` only.
 
 ### 3.7 Protected `main`
 
