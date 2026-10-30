@@ -14,8 +14,14 @@ jobs:
       - name: Check title against the commit convention
         env:
           TITLE: ${{ github.event.pull_request.title }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
-          pattern='^(feat|fix|style|refactor|docs|chore): [a-z].*[^.]$'
+          first='[a-z]'
+          # Dependabot capitalizes "Bump" after the prefix.
+          if [ "$AUTHOR" = 'dependabot[bot]' ]; then
+            first='[a-zA-Z]'
+          fi
+          pattern="^(feat|fix|style|refactor|docs|chore): $first.*[^.]\$"
           if ! printf '%s' "$TITLE" | grep -Eq "$pattern"; then
             echo "::error::PR title \"$TITLE\" does not match \"<type>: <summary>\". See spec/git-workflow.md."
             exit 1
